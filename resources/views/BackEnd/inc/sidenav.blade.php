@@ -1,7 +1,7 @@
 <div class="vertical-nav">
             <button class="collapse-menu"><i class="icon-menu2"></i></button>
             <div class="user-details clearfix">
-                <a href="profile.html" class="user-img"><img src="{{asset(Auth::user()->photo)}}" alt="User Info"> <span class="likes-info">9</span></a>
+                <a href="{{ route('home') }}" class="user-img"><img src="{{asset(Auth::user()->photo)}}" alt="User Info"> <span class="likes-info">9</span></a>
                 <h5 class="user-name">{{Auth::user()->name}}</h5>
             </div>
             <ul class="menu clearfix">
@@ -13,9 +13,9 @@
                     </ul>
                 </li>
                 <li class="@yield('category')">
-                    <a href="#"><i class="icon-lab3"></i> <span class="menu-item">Category</span> <span class="down-arrow"></span></a>
+                    <a href="#"><i class="icon-lab3"></i> <span class="menu-item">ক্যাটাগরি</span> <span class="down-arrow"></span></a>
                     <ul>
-                        <li><a href="{{ route('category.create') }}">Category Add</a></li>
+                        <li><a href="{{ route('category.create') }}">ক্যাটাগরি যুক্ত করুন</a></li>
                     </ul>
                 </li>
                 

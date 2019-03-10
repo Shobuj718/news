@@ -7,7 +7,7 @@
         <meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Themeforest, Bootstrap, C3 Graphs, D3 Graphs, NVD3 Graphs, Admin Skin, Black Admin Dashboard, Grey Admin Dashboard, Dark Admin Dashboard, Simple Admin Dashboard, Simple Admin Theme, Simple Bootstrap Dashboard, Invoice, Tasks, Profile">
         <meta name="author" content="Ramji">
         <link rel="shortcut icon" href="{{asset('public/BackEnd')}}/img/fav.png">
-        <title>Dashboard - Ehsan Dashboard</title>
+        <title>@yield('title')</title>
         <link href="{{asset('public/BackEnd')}}/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="{{asset('public/BackEnd')}}/css/main.css" rel="stylesheet" media="screen">
         <link href="{{asset('public/BackEnd')}}/fonts/icomoon/icomoon.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="page-title">
                                 <h3>@yield('heading_title')</h3>
-                                <p>Welcome to Ehsan News Admin Dashboard</p>
+                                <p>ইহসান   অ্যাডমিন  ড্যাশবোর্ড  আপনাকে স্বাগতম</p>
                             </div>
                         </div>
                        <!--  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

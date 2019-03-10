@@ -24,19 +24,15 @@ Route::get('ehsan-login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('ehsan-login', 'Auth\LoginController@login');
 
 
-Route::group(['namespace'=>'BackEnd'], function(){
-  Route::get('/','FrontController@index')->name('home');
-  Route::get('category/{id}','FrontController@posts')->name('category');
-  Route::get('single','FrontController@single_post')->name('single');
-
-
-});
-
 Route::group(['middleware' => 'auth'], function(){
-
 	Route::group(['namespace'=>'BackEnd', 'prefix' => 'categori'], function(){
-	  Route::get('/create', 'CategoryController@create')->name('category.create');
-	  Route::post('/store', 'CategoryController@store')->name('category.store');
+	Route::get('/create', 'CategoryController@create')->name('category.create');
+  Route::post('/store', 'CategoryController@store')->name('category.store');
+  Route::get('/edit/{id}/{parentId}', 'CategoryController@edit');
+	Route::post('/update/{id}', 'CategoryController@update')->name('category.update');
+
+  Route::get('/edit/{id}', 'CategoryController@parentCategoryEdit')->name('parentCategory.edit');
+  Route::post('/delete/{id}', 'CategoryController@categoryDelete')->name('category.delete');
 	});
 
 });
